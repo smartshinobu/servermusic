@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController ()
+
+@property AVAudioPlayer *player;
 
 @end
 
@@ -16,6 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //サーバーにおいてある音楽ファイルのURLを生成
+    NSURL *url = [NSURL URLWithString:@"http://bizanshinobu.miraiserver.com/sample.mp3"];
+    //urlをもとにNSDataを生成
+    NSData *sounddata = [NSData dataWithContentsOfURL:url];
+    //sounddataをもとにplayer初期化
+    self.player = [[AVAudioPlayer alloc]initWithData:sounddata error:NULL];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -24,4 +34,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//再生ボタンを押すと呼ばれるメソッド
+- (IBAction)music:(id)sender {
+    if (self.player.playing) {
+        self.player.currentTime = 0.0;
+    }else{
+        [self.player play];
+    }
+}
 @end

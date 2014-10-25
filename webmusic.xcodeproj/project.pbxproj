@@ -14,6 +14,8 @@
 		8786DA6B19FA0BA600132251 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8786DA6A19FA0BA600132251 /* Images.xcassets */; };
 		8786DA6E19FA0BA600132251 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8786DA6C19FA0BA600132251 /* LaunchScreen.xib */; };
 		8786DA7A19FA0BA700132251 /* webmusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8786DA7919FA0BA700132251 /* webmusicTests.m */; };
+		8786DA8419FA0BEF00132251 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8786DA8319FA0BEF00132251 /* AVFoundation.framework */; };
+		8786DA8619FA0BFA00132251 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8786DA8519FA0BFA00132251 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		8786DA7319FA0BA700132251 /* webmusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webmusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8786DA7819FA0BA700132251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8786DA7919FA0BA700132251 /* webmusicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webmusicTests.m; sourceTree = "<group>"; };
+		8786DA8319FA0BEF00132251 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8786DA8519FA0BFA00132251 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8786DA8619FA0BFA00132251 /* AudioToolbox.framework in Frameworks */,
+				8786DA8419FA0BEF00132251 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		8786DA5119FA0BA600132251 = {
 			isa = PBXGroup;
 			children = (
+				8786DA8519FA0BFA00132251 /* AudioToolbox.framework */,
+				8786DA8319FA0BEF00132251 /* AVFoundation.framework */,
 				8786DA5C19FA0BA600132251 /* webmusic */,
 				8786DA7619FA0BA700132251 /* webmusicTests */,
 				8786DA5B19FA0BA600132251 /* Products */,
