@@ -21,9 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //サーバーにおいてある音楽ファイルのURLを生成
-    NSURL *url = [NSURL URLWithString:@"http://bizanshinobu.miraiserver.com/sample.mp3"];
+    NSURL *url = [NSURL URLWithString:@"http://bizanshinobu.miraiserver.com/example.caf"];
     //urlをもとにNSDataを生成
     NSData *sounddata = [NSData dataWithContentsOfURL:url];
+    NSLog(@"データサイズ%ld",sounddata.length);
     //sounddataをもとにplayer初期化
     self.player = [[AVAudioPlayer alloc]initWithData:sounddata error:NULL];
     // Do any additional setup after loading the view, typically from a nib.
